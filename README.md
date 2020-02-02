@@ -1,4 +1,23 @@
-# albertpratomo.github.io
-Hi, I'm Albert, a driven web developer who is passionate in combining data, design, and development to generate growth. Keen on solving problems and working together. Aspire to create meaningful impact to the world through technology.
+# albertpratomo
 
-This is a work in progress of my personal website. For now, my static portfolio PDF is displayed.
+Hello world! I'm Albert, a full-stack web developer and an aspiring technopreneur. 🖥🚀
+
+This is a WIP personal website to show my resume, portfolios, and writings.  
+Built with Nuxt.js and Netlify CMS, hosted in Github Pages.
+
+## Build Setup
+
+``` bash
+# install dependencies
+$ yarn install
+
+# serve with hot reload at localhost:3000
+$ yarn dev
+
+# build for production and launch server
+$ yarn build
+$ yarn start
+
+# generate static project
+$ yarn generate
+```
