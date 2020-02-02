@@ -1,4 +1,4 @@
 {
   "title": "Hello world",
-  "body": "This content is inputted from Netlify CMS."
+  "body": "This content is inputted from Netlify CMS. Try publish mode.\n\n![alt-albert](/images/albert-owow.png \"title-albert\")"
 }
