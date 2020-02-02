@@ -1,4 +1,7 @@
 module.exports = {
-    // add your custom config here
-    // https://stylelint.io/user-guide/configuration
+    extends: 'stylelint-config-twbs-bootstrap/scss',
+    rules: {
+        indentation: 4,
+        'string-quotes': 'single'
+    }
 }
