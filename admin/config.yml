@@ -2,7 +2,7 @@ backend:
   name: github
   repo: albertpratomo/albertpratomo.github.io
   branch: develop
-  site_domain: albertpratomo.netlify.com
+  site_domain: albertpratomo.github.io
 
 publish_mode: editorial_workflow
 
