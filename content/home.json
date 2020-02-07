@@ -1,5 +1,5 @@
 {
-  "title": "Hello world!",
+  "title": "Hello world! How are you?",
   "intro": "Hello world! I’m Albert, a full-stack web developer and an aspiring technopreneur. 🖥🚀\\\nThis is a WIP personal website to show my resume, portfolios, and writings. Enjoy!",
   "works": [
     {
@@ -9,6 +9,10 @@
     {
       "company": "OWOW",
       "position": "Full-stack Developer"
+    },
+    {
+      "company": "OWOW",
+      "position": "Developee"
     }
   ]
 }
