@@ -23,6 +23,7 @@
         </g>
     </svg>
 </template>
+
 <style>
 .nuxt-logo {
     animation: 1s appear;

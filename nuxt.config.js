@@ -9,15 +9,15 @@ export default {
             { charset: 'utf-8' },
             {
                 name: 'viewport',
-                content: 'width=device-width, initial-scale=1'
+                content: 'width=device-width, initial-scale=1',
             },
             {
                 hid: 'description',
                 name: 'description',
-                content: process.env.npm_package_description || ''
-            }
+                content: process.env.npm_package_description || '',
+            },
         ],
-        link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+        link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     },
     /*
      ** Customize the progress-bar color
@@ -36,9 +36,9 @@ export default {
      */
     buildModules: [
         // Doc: https://github.com/nuxt-community/eslint-module
-        ['@nuxtjs/eslint-module', { fix: true }],
+        ['@nuxtjs/eslint-module', { fix: false, cache: true }],
         // Doc: https://github.com/nuxt-community/stylelint-module
-        ['@nuxtjs/stylelint-module', { fix: true, lintDirtyModulesOnly: true }]
+        ['@nuxtjs/stylelint-module', { fix: true, lintDirtyModulesOnly: true }],
     ],
     /*
      ** Nuxt.js modules
@@ -50,8 +50,15 @@ export default {
         '@nuxtjs/axios',
         '@nuxtjs/pwa',
         // Doc: https://github.com/nuxt-community/dotenv-module
-        '@nuxtjs/dotenv'
+        '@nuxtjs/dotenv',
+        '@nuxtjs/prismic',
     ],
+    /*
+     ** Prismic CMS configuration
+     */
+    prismic: {
+        endpoint: 'https://albertpratomo.cdn.prismic.io/api/v2',
+    },
     /*
      ** Axios module configuration
      ** See https://axios.nuxtjs.org/options
@@ -64,6 +71,6 @@ export default {
         /*
          ** You can extend webpack config here
          */
-        extend(config, ctx) {}
-    }
-}
+        extend(config, ctx) {},
+    },
+};
