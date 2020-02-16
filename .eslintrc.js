@@ -8,17 +8,25 @@ module.exports = {
         parser: 'babel-eslint',
     },
     ignorePatterns: ['!.eslintrc.js'], // Force to lint `.eslintrc.js`.
-    plugins: ['prettier'],
     extends: [
-        '@nuxtjs',
+        '@nuxtjs', // Already extends eslint-plugin-vue/recommended.
         'plugin:nuxt/recommended',
-        'plugin:vue/recommended',
-        // The lines below disable rules that might conflict with Prettier.
-        // https://github.com/prettier/eslint-config-prettier
-        'plugin:prettier/recommended',
-        'prettier/vue',
     ],
     rules: {
-        'prettier/prettier': 'error',
+        'array-bracket-spacing': ['error', 'never'],
+
+        'comma-dangle': ['error', 'always-multiline'],
+
+        'indent': ['error', 4, {'SwitchCase': 1}],
+
+        'no-param-reassign': ['error'],
+
+        'object-curly-spacing': ['error', 'never'],
+
+        'semi': ['error', 'always'],
+
+        'space-before-function-paren': ['error', 'never'],
+
+        'vue/html-indent': ['error', 4],
     },
 };
