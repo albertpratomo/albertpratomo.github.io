@@ -31,8 +31,8 @@ jobs:
     - name: Install dependencies
       run: yarn install --check-files --frozen-lockfile --non-interactive
 
-    - name: Build static site
-      run: yarn generate
+    - name: Build
+      run: yarn build
 
     - name: Deploy to user's main Gihub Pages
       uses: peaceiris/actions-gh-pages@v2
