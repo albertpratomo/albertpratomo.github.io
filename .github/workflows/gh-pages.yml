@@ -3,7 +3,7 @@ name: Build & deploy Github Pages
 on:
   push:
     branches:
-    - source
+    - develop
 
 jobs:
   build-deploy:
