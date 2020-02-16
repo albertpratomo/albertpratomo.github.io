@@ -1,70 +1,17 @@
 <template>
-    <div class="container">
-        <div>
-            <logo />
-            <h1 class="title">
-                albertpratomo
-            </h1>
-            <h2 class="subtitle">
-                Personal website to show my resume, portfolios, and writings.
-            </h2>
-            <div class="links">
-                <a
-                    href="https://nuxtjs.org/"
-                    target="_blank"
-                    class="button--green"
-                >
-                    Documentation
-                </a>
-                <a
-                    href="https://github.com/nuxt/nuxt.js"
-                    target="_blank"
-                    class="button--grey"
-                >
-                    GitHub
-                </a>
-            </div>
-        </div>
-    </div>
+    <slices-block :slices="page.data.body" />
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue';
+import SlicesBlock from '@/components/SlicesBlock';
 
 export default {
-    components: {
-        Logo,
+    name: 'Home',
+    components: {SlicesBlock},
+    async asyncData({$prismic}) {
+        const page = await $prismic.api.getByUID('page', 'home');
+
+        return {page};
     },
 };
 </script>
-
-<style>
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.title {
-    display: block;
-    font-size: 100px;
-    font-weight: 300;
-    color: #35495e;
-    letter-spacing: 1px;
-}
-
-.subtitle {
-    padding-bottom: 15px;
-    font-size: 42px;
-    font-weight: 300;
-    color: #526488;
-    word-spacing: 5px;
-}
-
-.links {
-    padding-top: 15px;
-}
-</style>
