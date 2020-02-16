@@ -6,7 +6,7 @@ export default {
     head: {
         title: process.env.npm_package_name || '',
         meta: [
-            { charset: 'utf-8' },
+            {charset: 'utf-8'},
             {
                 name: 'viewport',
                 content: 'width=device-width, initial-scale=1',
@@ -17,16 +17,12 @@ export default {
                 content: process.env.npm_package_description || '',
             },
         ],
-        link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+        link: [{rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}],
     },
     /*
      ** Customize the progress-bar color
      */
-    loading: { color: '#fff' },
-    /*
-     ** Global CSS
-     */
-    css: [],
+    loading: {color: '#20c997'},
     /*
      ** Plugins to load before mounting the App
      */
@@ -36,9 +32,9 @@ export default {
      */
     buildModules: [
         // Doc: https://github.com/nuxt-community/eslint-module
-        ['@nuxtjs/eslint-module', { fix: false, cache: true }],
+        ['@nuxtjs/eslint-module', {fix: false, cache: true}],
         // Doc: https://github.com/nuxt-community/stylelint-module
-        ['@nuxtjs/stylelint-module', { fix: true, lintDirtyModulesOnly: true }],
+        ['@nuxtjs/stylelint-module', {fix: true, lintDirtyModulesOnly: true}],
     ],
     /*
      ** Nuxt.js modules
@@ -52,7 +48,37 @@ export default {
         // Doc: https://github.com/nuxt-community/dotenv-module
         '@nuxtjs/dotenv',
         '@nuxtjs/prismic',
+        '@nuxtjs/style-resources',
     ],
+    /*
+     ** Global CSS
+     */
+    css: [
+        '@/assets/scss/main.scss',
+    ],
+    /*
+     ** Autoload SCSS variables, functions, and mixins in all Vue components.
+     ** See https://github.com/nuxt-community/style-resources-module
+     */
+    styleResources: {
+        scss: [
+            '@/assets/scss/_variables.scss',
+            'node_modules/bootstrap/scss/_functions.scss',
+            'node_modules/bootstrap/scss/_variables.scss',
+            'node_modules/bootstrap/scss/_mixins.scss',
+            '@/assets/scss/mixins/_index.scss',
+        ],
+    },
+    /*
+     ** BootstrapVue configuration
+     */
+    bootstrapVue: {
+        bootstrapCSS: false,
+        bootstrapVueCSS: false,
+        componentPlugins: [
+            'LayoutPlugin',
+        ],
+    },
     /*
      ** Prismic CMS configuration
      */
