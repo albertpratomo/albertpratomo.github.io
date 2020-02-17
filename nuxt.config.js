@@ -1,5 +1,13 @@
 export default {
     mode: 'spa',
+
+    /*
+     ** SPA routes fallback (https://nuxtjs.org/guide/routing/#spa-fallback)
+     */
+    generate: {
+        fallback: true,
+    },
+
     /*
      ** Headers of the page
      */
@@ -19,14 +27,17 @@ export default {
         ],
         link: [{rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}],
     },
+
     /*
      ** Customize the progress-bar color
      */
     loading: {color: '#20c997'},
+
     /*
      ** Plugins to load before mounting the App
      */
     plugins: [],
+
     /*
      ** Nuxt.js dev-modules
      */
@@ -36,6 +47,7 @@ export default {
         // Doc: https://github.com/nuxt-community/stylelint-module
         ['@nuxtjs/stylelint-module', {fix: true, lintDirtyModulesOnly: true}],
     ],
+
     /*
      ** Nuxt.js modules
      */
@@ -50,12 +62,14 @@ export default {
         '@nuxtjs/prismic',
         '@nuxtjs/style-resources',
     ],
+
     /*
      ** Global CSS
      */
     css: [
         '@/assets/scss/main.scss',
     ],
+
     /*
      ** Autoload SCSS variables, functions, and mixins in all Vue components.
      ** See https://github.com/nuxt-community/style-resources-module
@@ -69,6 +83,7 @@ export default {
             '@/assets/scss/mixins/_index.scss',
         ],
     },
+
     /*
      ** BootstrapVue configuration
      */
@@ -79,17 +94,20 @@ export default {
             'LayoutPlugin',
         ],
     },
+
     /*
      ** Prismic CMS configuration
      */
     prismic: {
         endpoint: 'https://albertpratomo.cdn.prismic.io/api/v2',
     },
+
     /*
      ** Axios module configuration
      ** See https://axios.nuxtjs.org/options
      */
     axios: {},
+
     /*
      ** Build configuration
      */
