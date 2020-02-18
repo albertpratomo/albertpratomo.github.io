@@ -3,7 +3,6 @@
 Hello world. I'm Albert, a full-stack web developer and an aspiring technopreneur. 🖥🚀
 
 This is a WIP personal website to show my resume, portfolios, and writings.  
-Built using Nuxt and Prismic, hosted in Github Pages.
 
 ## Build Setup
 
