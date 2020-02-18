@@ -1,8 +1,8 @@
 <template>
     <div>
-        <prismic-rich-text :field="page.data.title" class="mb-3" />
+        <prismic-rich-text :field="page.title" class="mb-3" />
 
-        <slices-block :slices="page.data.body" />
+        <slices-block :slices="page.body" />
     </div>
 </template>
 
@@ -12,10 +12,16 @@ import SlicesBlock from '@/components/SlicesBlock';
 export default {
     name: 'Page',
     components: {SlicesBlock},
-    async asyncData({params, $prismic}) {
-        const page = await $prismic.api.getByUID('page', params.uid);
+    async asyncData({$prismic, params, redirect, error}) {
+        if (params.uid === 'home') { redirect('/'); }
 
-        return {page};
+        try {
+            const page = await $prismic.api.getByUID('page', params.uid);
+
+            return {page: page.data};
+        } catch (e) {
+            error({statusCode: 404, message: 'Page not found'});
+        }
     },
 };
 </script>
