@@ -61,6 +61,7 @@ export default {
         '@nuxtjs/dotenv',
         '@nuxtjs/prismic',
         '@nuxtjs/style-resources',
+        'nuxt-fontawesome',
     ],
 
     /*
@@ -108,6 +109,25 @@ export default {
      ** See https://axios.nuxtjs.org/options
      */
     axios: {},
+
+    /*
+     ** Nuxt-fontawesome module configuration
+     ** See https://github.com/vaso2/nuxt-fontawesome
+     */
+    fontawesome: {
+        component: 'fa',
+        imports: [
+            {
+                set: '@fortawesome/free-brands-svg-icons',
+                icons: [
+                    'faGithub',
+                    'faInstagram',
+                    'faLinkedin',
+                    'faYoutube',
+                ],
+            },
+        ],
+    },
 
     /*
      ** Build configuration
